@@ -1,0 +1,28 @@
+<h1>ショップ登録</h1>
+<%= form_with model: @shop, url: "/admins/shops", local:true do |f| %>
+  <div class= "form-group">
+    <label>ショップ画像</label>
+    <%= f.attachment_field :image %>
+  </div>
+
+　<div class= "form-group">
+    <label>ショップ名</label>
+    <%= f.text_field :name, class: "form-control", placeholder: "ショップ名" %>
+  </div>
+
+  <div class= "form-group">
+    <label>住所</label>
+    <%= f.text_field :address, class: "form-control", placeholder: "住所"%>
+  </div>
+
+  <div class = "form-group">
+    <label>電話番号</label>
+    <%= f.text_field :phonenumber, class: "form-control", placeholder: "電話番号" %>
+  </div>
+
+  <div class= "form-group">
+    <label>ショップ説明</label>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <%= f.submit '新規登録', class: "btn btn-success" %>
+<% end %>

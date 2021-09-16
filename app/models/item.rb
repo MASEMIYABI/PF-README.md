@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
+  has_many :cart_items,dependent: :destroy
+  has_many :shop,dependent: :destroy
   belongs_to :genre
   attachment :image
   def add_tax_price

@@ -1,0 +1,7 @@
+<h2><span class="badge bg-secondary text-white mb-3">注文情報入力</span></h2>
+<%= form_with(model: @order,url: "/orders/confirm",local:true ) do |f| %>
+  <label>支払方法</label>
+
+  <label>予約日</label>
+　<%=f.submit '確認画面へ進む',class: "btn btn-primary" %>
+<% end %>

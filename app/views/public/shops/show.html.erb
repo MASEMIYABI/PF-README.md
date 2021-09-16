@@ -1,0 +1,5 @@
+<h2>商品一覧</h2>
+<%= attachment_image_tag @item, :image, :fill, 270, 190, class: 'card-img-top', fallback: "no_image.jpg" %>
+<p class="card-title"><%= @item.name %></p>
+<p class="card-text">￥<%= @item.price.to_s(:delimited) %>
+<p><%= @item.description %></p>

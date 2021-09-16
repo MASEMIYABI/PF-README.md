@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_12_090505) do
+ActiveRecord::Schema.define(version: 2021_09_16_005737) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,8 +20,36 @@ ActiveRecord::Schema.define(version: 2021_09_12_090505) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "admin_id"
+  end
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "item_id"
+    t.integer "customer_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "phone_number", null: false
+    t.integer "subject", default: 0, null: false
+    t.text "message", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "customers", force: :cascade do |t|
@@ -42,9 +70,9 @@ ActiveRecord::Schema.define(version: 2021_09_12_090505) do
   end
 
   create_table "genres", force: :cascade do |t|
+    t.string "genre_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "genre_name"
   end
 
   create_table "items", force: :cascade do |t|
@@ -65,6 +93,16 @@ ActiveRecord::Schema.define(version: 2021_09_12_090505) do
     t.integer "status", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.string "image_id"
+    t.string "address"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "phonenumber"
   end
 
 end

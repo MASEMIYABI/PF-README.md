@@ -1,0 +1,7 @@
+<h3>ショップ詳細</h3>
+<%= attachment_image_tag @shop, :image, size: "325x240" %>
+<p>ショップ名<%= @shop.name %></p>
+<p>ショップ住所<%= @shop.address %></p>
+<p>電話番号<%= @shop.phonenumber %></p>
+<p>ショップ説明<%= @shop.description %></p>
+<%= link_to "編集する", edit_admins_shop_path(params[:id]), class: "btn btn-sm btn-success" %>
