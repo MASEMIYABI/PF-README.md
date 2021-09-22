@@ -1,9 +1,5 @@
 class Public::SearchesController < ApplicationController
-  def search
+    def search
+    end  
   end
 
-  private
-  def search_for
-  end
-
-end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_005737) do
+ActiveRecord::Schema.define(version: 2021_09_21_101041) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 2021_09_16_005737) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "image_id"
+    t.string "address"
+    t.text "description"
+    t.string "phone_number"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -86,13 +90,42 @@ ActiveRecord::Schema.define(version: 2021_09_16_005737) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_details", force: :cascade do |t|
+    t.integer "item_id"
+    t.integer "order_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "total_payment"
     t.integer "payment_method", default: 0
-    t.integer "status", default: 0
+    t.integer "contact_mail", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "produst_comments", force: :cascade do |t|
+    t.integer "admin_id"
+    t.integer "customer_id", null: false
+    t.float "rate", default: 0.0, null: false
+    t.text "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "evaluation"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "time"
+    t.datetime "date"
+    t.integer "customer_id"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "item_id"
+    t.integer "order_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -103,6 +136,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_005737) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "phonenumber"
+    t.float "evaluation"
   end
 
 end

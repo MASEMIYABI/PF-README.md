@@ -1,9 +1,12 @@
 class Item < ApplicationRecord
   has_many :cart_items,dependent: :destroy
   has_many :shop,dependent: :destroy
+  belongs_to :admin
   belongs_to :genre
   attachment :image
-  def add_tax_price
+  
+  has_many :order_details
+  def add_tax_price#持ち帰り税込表示
     (self.price * 1.08).round
   end
 

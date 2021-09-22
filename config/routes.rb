@@ -9,20 +9,23 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     resource "customers",only: [:show,:edit,:update]
     resources :shops,only: [:index,:new,:create,:show,:edit,:update]
-    resources "items",only: [:index,:show]
-    resources :cart_items
-  delete 'cart_items' => 'cart_items#reset'
-  resources :orders,only: [:index,:show,:new,:create] do
+    resources :items,only: [:index,:show]
+    resources :cart_items, only: [:index, :update, :create, :destroy]
+    delete 'cart_items' => 'cart_items#reset'
+    resources :orders,only: [:index,:show,:new,:create] do
+    resources :reservations
     collection do
       post 'confirm'
       get 'complete'
     end
   end
+  get '/search', to: 'searches#search'#検索
   end
-
+  resources :produst_comments, only: [:index,:show,:new, :update, :create, :destroy]
   # 管理者側
 
 namespace :admins do
+  resource :admins,only: [:show,:edit,:update]
   resources :genres, only: [:index,:new,:create,:edit,:update]
   resources :items, only: [:index,:new,:create,:show,:edit,:update]
   resources :shops,only: [:index,:new,:create,:show,:edit,:update]
@@ -45,4 +48,5 @@ resources :card, only: [:new, :show] do
     post 'delete', to: 'card#delete'
   end
 end
+
 end

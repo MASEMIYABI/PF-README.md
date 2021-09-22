@@ -18,3 +18,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require moment
+//= require bootstrap-datetimepicker
+//= require jquery.raty.js

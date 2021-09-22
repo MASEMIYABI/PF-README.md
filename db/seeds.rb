@@ -7,8 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Admin.create!(
    name: 'まさや',
-   email: 'admin@admin',
-   password: 'testtest'
+   address: '東京都世田谷区',
+   description: '出来立てで美味しいよ',
+   phone_number: 0564732277,
+   image: File.open('./app/assets/images/shop1.jpg'),
+   email: 'admi1n@admin1',
+   password: 'testtest1'
+)
+Admin.create!(
+   name: '万福',
+   address: '東京都世田谷区',
+   description: '串焼き',
+   phone_number: 05634343,
+   image: File.open('./app/assets/images/shop1.jpg'),
+   email: 'admin2@admin2',
+   password: 'testtest2'
 )
 
 Customer.create!(

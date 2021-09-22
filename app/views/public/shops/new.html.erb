@@ -1,0 +1,20 @@
+<h2>ショップ評価を投稿</h2>
+<%#= form_with (model: @shop,local: true) do |shop| %>
+<%= form_with model:@shop,url:'/shops',local:true do |shop| %>
+ <div>
+   <%= shop.label 'お店の評価' %>
+   <%= shop.text_area :name %>
+ </div>
+ <div id="evaluate_stars">
+   <label>評価</label>
+ </div>
+ <%= shop.submit %>
+<% end %>
+<script>
+  $('#evaluate_stars').raty({
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    scoreName: 's[evaluation]' //登録するモデル名とカラム名を記述
+  });
+</script>

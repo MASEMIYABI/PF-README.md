@@ -1,0 +1,9 @@
+<h2>マイページ</h2>
+  <h3>登録情報
+  <%= link_to "編集する",edit_customers_path, class: "btn btn-sm btn-success" %></h3>
+　<table border="1">
+　  <tr>
+      <th>氏名</th>
+      <th><%= @customer.name %>
+    </tr>
+  </table>  

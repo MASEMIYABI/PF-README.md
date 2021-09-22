@@ -1,0 +1,26 @@
+<h2>マイページ</h2>
+  <h3>登録情報
+  <%= link_to "編集する",edit_admins_admins_path, class: "btn btn-sm btn-success" %></h3>
+　<table border="1">
+　  <%= attachment_image_tag @admins, :image, size: "325x240" %>
+　  <tr>
+      <th>ショップ名</th>
+      <th><%= @admins.name %>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <th><%= @admins.email %></th>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <th><%= @admins.phone_number %></th>
+    </tr>
+    <tr>
+      <th>住所</th>
+      <th><%= @admins.address %></th>
+    </tr>
+    <tr>
+      <th>ショップ紹介文</th>
+      <th><%= @admins.description %></th>
+    </tr>
+  </table>

@@ -16,3 +16,14 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import 'bootstrap-datetimepicker';
+.jumbotron {
+  background-image: image-url("top_image2.jpg");
+  background-size: cover;
+  background-position: center 80%;
+}
+
+p, h6, h5, h3, h2 {
+  font-family: 'Kaisei Tokumin';
+  color:#000000;
+}

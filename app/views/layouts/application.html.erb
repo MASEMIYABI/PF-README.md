@@ -11,70 +11,10 @@
   </head>
 
   <body>
-    <header class="shadow-sm">
-      <nav class="navbar navbar-expand-lg navbar-light bg-success">
-        <div class="container">
-          <%= link_to root_path, class: "navbar-brand" do %>
-            <h1>Esoon</h1>
-          <% end %>
-          <% if customer_signed_in? %>
-            <ul class="navbar-nav ml-auto">
-              <li>
-                <%= link_to "マイページ",customers_path %>
-              </li>
-              <li>
-                <%= link_to "店舗一覧",shops_path %>
-              </li>
-              <li>
-                <%= link_to "カート",cart_items_path %>
-              </li>
-              <li>
-                <%= link_to "ログアウト",destroy_customer_session_path,method: :delete %>
-              </li>
-          <% elsif admin_signed_in? %>
-            <ul class="navbar-nav ml-auto">
-              <li>
-                <%=link_to "店舗一覧",admin_shops_path %>
-              </li>
-              <li>
-                <%= link_to " 商品一覧", admins_items_path %>
-              </li>
-              <li>
-                <%= link_to " ジャンル一覧", admins_genres_path %>
-              </li>
-              <li>
-                <%= link_to " ログアウト", destroy_admin_session_path, method: :delete %>
-              </li>
-              </ul>
-          <% else %>
-              <li>
-                <%= link_to "店舗一覧",shops_path %>
-              </li>
-              <li>
-                <%= link_to "商品一覧",items_path %>
-              </li>
-              <li>
-                <%= link_to "新規登録",new_customer_registration_path %>
-              </li>
-              <li>
-                <%= link_to "ログイン",new_customer_session_path %>
-              </li>
-            </ul>
-          <% end %>
-        </div>
-      </nav>
-    </header>
+    <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 
-  <footer>
-    <div class = "container mt-5">
-      <div class = "row">
-        <div class = "mx-auto">
-          <%=link_to "お問い合わせ",new_contact_path %>
-          <p>フッターだよー</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 </html>
+

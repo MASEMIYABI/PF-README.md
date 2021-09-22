@@ -1,7 +1,5 @@
 <h3>商品詳細</h3>
-
 <%= attachment_image_tag @item, :image, size: "325x240" %>
-
 <p>商品名 :<%= @item.name %></p>
 <p>商品説明 :<%= @item.description %></p>
 <p>ジャンル :<%= @item.genre.genre_name %></p>
@@ -12,3 +10,4 @@
                     <p class= "text-success">販売中</p>
                    <% end %></p>
 <%= link_to "編集する", edit_admins_item_path(params[:id]), class: "btn btn-sm btn-success" %>
+<%= link_to "商品一覧へ",admins_items_path, class: "btn btn-sm btn-success" %>
