@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 2021_09_21_101041) do
     t.integer "customer_id"
     t.integer "total_payment"
     t.integer "payment_method", default: 0
-    t.integer "contact_mail", default: 0
+    t.integer "status", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -124,7 +124,6 @@ ActiveRecord::Schema.define(version: 2021_09_21_101041) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "item_id"
     t.integer "order_id"
   end
 
