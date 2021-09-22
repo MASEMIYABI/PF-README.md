@@ -71,3 +71,11 @@ gem "dotenv-rails"#環境変数
 gem 'rails-i18n'
 gem 'payjp'#クレジットカード
 gem 'enum_help'
+gem 'ransack'#検索機能
+gem 'jquery-rails'#レビュー
+gem 'bootstrap3-datetimepicker-rails'#予約
+gem 'momentjs-rails', '>= 2.9.0'#予約
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
