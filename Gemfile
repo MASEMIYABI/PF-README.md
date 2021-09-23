@@ -65,9 +65,7 @@ gem 'kaminari','~> 1.2.1'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'bootstrap', '~> 4.5'
-gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
-gem "dotenv-rails"#環境変数
 gem 'rails-i18n'
 gem 'payjp'#クレジットカード
 gem 'enum_help'
