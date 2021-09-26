@@ -23,6 +23,8 @@
             <table class="table table-bordered">
               <th colspan="col">合計金額</th>
               <th colspan="col">¥<%= @order.total_payment %></th>
+              <th colspan="col">予約</th>
+              <th colspan="col"><%= @order.month.strftime('%Y年%m月%d日 %H:%M') %></th>
           </div>
         </div>
         </thead>
@@ -30,6 +32,7 @@
     </div>
   </div>
   <%= form_with model: @order,url: "/orders", method: :post, local: true do |f| %>
+  　　<%= f.hidden_field :month  %>
     <%= f.hidden_field :customer_id, value: current_customer.id %>
     <%= f.hidden_field :shipping_fee, value: 800 %>
     <%=f.submit '確認',class: "btn btn-primary" %>

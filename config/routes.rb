@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :produst_comments,only: [:index,:show,:new, :update, :create, :destroy]
   get 'card/new'
   get 'card/show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   end
   get '/search', to: 'searches#search'#検索
   end
-  resources :produst_comments, only: [:index,:show,:new, :update, :create, :destroy]
+
   # 管理者側
 
 namespace :admins do

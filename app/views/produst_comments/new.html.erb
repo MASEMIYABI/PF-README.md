@@ -1,8 +1,8 @@
 <h2>ショップ評価を投稿</h2>
-<%= form_with model:@comment,url:'/product_comments',local:true do |shop| %>
+<%= form_with model:@comment,url:'/produst_comments',local:true do |shop| %>
  <div>
    <div class="form-group row">
-    <%= shop.label :comment, '口コミ内容 ', class:'col-md-3 col-form-label' %>
+     <%= shop.label :comment, '口コミ内容 ', class:'col-md-3 col-form-label' %>
     <div class="col-md-9">
       <%= shop.text_area :comment, class: "form-control", rows: "8" %>
     </div>

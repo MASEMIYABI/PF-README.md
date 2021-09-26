@@ -1,0 +1,5 @@
+<h2>レビュー★評価</h2>
+<% @comments.each do |comment|%>
+<%= comment.comment %>
+<% end %>
+<h3><%= link_to "新規投稿",new_produst_comment_path %></h3>

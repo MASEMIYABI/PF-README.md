@@ -5,13 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Admin.create!(
    name: 'まさや',
    address: '東京都世田谷区',
    description: '出来立てで美味しいよ',
    phone_number: 0564732277,
    image: File.open('./app/assets/images/shop1.jpg'),
-   email: 'admi1n@admin1',
+  email: 'admi1n@admin1',
    password: 'testtest1'
 )
 Admin.create!(
@@ -20,7 +21,7 @@ Admin.create!(
    description: '串焼き',
    phone_number: 05634343,
    image: File.open('./app/assets/images/shop1.jpg'),
-   email: 'admin2@admin2',
+  email: 'admin2@admin2',
    password: 'testtest2'
 )
 
@@ -48,12 +49,4 @@ Item.create!(
 	description: '揚げたてうまうま',
 	price: '420',
 	is_stopped: 'false',
-	image: File.open('./app/assets/images/karaage.jpg')
-	)
-Shop.create!(
-	name: 'まさや',
-	address: '東京都世田谷区',
-	description: '出来立てで美味しいよ',
-	phonenumber: 0564732277,
-	image: File.open('./app/assets/images/shop1.jpg')
 	)
