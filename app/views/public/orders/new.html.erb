@@ -6,13 +6,11 @@
         <%= @customer.last_name %><%= @customer.first_name %>
           <%=link_to "カード登録",new_card_path %>
         <div class='input-group date' id='datetimepicker6'>
-          <%= f.text_field :month, :placeholder => "予約月"%>
+          <%= f.text_field :month, :placeholder => "予約"%>
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-calendar"></span>
           </span>
         </div>
-        <%= f.text_field :date, :placeholder => "予約日"%>
-        <%= f.number_field :time,:placeholder => "時間"%>
       　<%=f.submit '確認画面へ進む',class: "btn btn-primary" %>
       <% end %>
     </div>
@@ -30,8 +28,5 @@
         $("#datetimepicker7").on("dp.change", function (e) {
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
-
-
     });
-
 </script>

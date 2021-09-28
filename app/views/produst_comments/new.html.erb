@@ -9,7 +9,7 @@
   </div>
  </div>
 
- <div id="rate_stars">
+ <div class="rate_stars" id="star">
    <%= shop.label :'評価' %>
    <%= shop.hidden_field :rate, id: :rate_stars %>
  </div>
@@ -21,10 +21,10 @@
 <% end %>
 <script>
 
-  $('#rate_stars').raty({
+  $('.rate_stars').raty({
     starOn: "<%= asset_path('star-on.png') %>",
     starOff: "<%= asset_path('star-off.png') %>",
     starHalf: "<%= asset_path('star-half.png') %>",
-    scoreName: 'produst_comment[rate]' //登録するモデル名とカラム名を記述
+    scoreName: 'produst_comment[rate]'
   });
 </script>

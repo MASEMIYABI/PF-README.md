@@ -13,12 +13,14 @@
             </ul>
           <% elsif admin_signed_in? %>
             <ul class="navbar-nav ml-auto">
-              <%=link_to "マイページ",admins_admins_path %>
-              <%= link_to " 商品一覧", admins_items_path %>
-              <%= link_to " ジャンル一覧", admins_genres_path %>
-              <%= link_to " ログアウト", destroy_admin_session_path, method: :delete %>
+              <%= link_to "/マイページ",admins_admins_path %>
+              <%= link_to " /商品一覧", admins_items_path %>
+              <%= link_to " /ジャンル一覧", admins_genres_path %>
+              <%= link_to " /予約一覧", admins_orders_path %>
+              <%= link_to " /ログアウト", destroy_admin_session_path, method: :delete %>
             </ul>
           <% else %>
+            <ul>
                 <%= link_to "店舗一覧",shops_path %>
                 <%= link_to "商品一覧",items_path %>
                 <%= link_to "新規登録",new_customer_registration_path %>

@@ -17,7 +17,9 @@ class ProdustCommentsController < ApplicationController
       render :new
     end
   end
+  
   private
+  
   def produst_comment_params
     params.require(:produst_comment).permit(:comment,:admin_id)
   end

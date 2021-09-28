@@ -35,18 +35,18 @@ Customer.create!(
   phone_number: '09012345678',
 )
 Genre.create!(
-	genre_name: '揚げ物',
+    genre_name: '揚げ物',
 )
 Genre.create!(
-	genre_name: 'お弁当',
+    genre_name: 'お弁当',
 )
 Genre.create!(
-	genre_name: '一品物',
+    genre_name: '一品物',
 	)
 Item.create!(
-	genre_id: '1',
-	name: '唐揚げ',
-	description: '揚げたてうまうま',
-	price: '420',
-	is_stopped: 'false',
+    genre_id: '1',
+    name: '唐揚げ',
+    description: '揚げたてうまうま',
+    price: '420',
+    is_stopped: 'false',
 	)

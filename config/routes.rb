@@ -30,7 +30,10 @@ namespace :admins do
   resources :genres, only: [:index,:new,:create,:edit,:update]
   resources :items, only: [:index,:new,:create,:show,:edit,:update]
   resources :shops,only: [:index,:new,:create,:show,:edit,:update]
+  resources :orders, only: [:index,:show,:update]
+  resources :order_details, only: [:update]
 end
+
 
 devise_for :admins, controllers: {
   sessions: 'admins/sessions'

@@ -1,4 +1,5 @@
 class Public::ReservationsController < ApplicationController
+
   def create
      @reservation = current_customer.reservations.create(reservation_params)
      redirect_to root_path notice:"予約が完了しました"
@@ -7,6 +8,6 @@ class Public::ReservationsController < ApplicationController
 　private
 
 　def reservation_params
-    params.require(:reservation).permit(:time, :date, :status,:item_id)
+    params.require(:reservation).permit(:time, :date, :status,:order_id)
   end
 end
