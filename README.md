@@ -1,24 +1,38 @@
-# README
+# Esoon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+- お客様は商品の見ながらゆっくりお家で注文でき、お店に取りに行きすぐに帰宅できるお持ち帰りサイトです。お店側では管理者のページを作成し、商品ごとに予約可能か不可かを選択できるようにします。お客様は検索機能と一覧からお店を見つけて注文予約を行うことができる。検索機能から住所からとジャンルから検索を行うことができる。住所をお店ごとに記載をしているのでそれから商品を受け取りに行く。お店の対応や商品はレビューなどで評価できる。
 
-Things you may want to cover:
+### サイトテーマ
+- お持ち帰りメインの予約サイト
 
-* Ruby version
+### テーマを選んだ理由
+- コロナ禍でお持ち帰りが主流となってきていて、お持ち帰り専用の予約サイトをあまり見かけないと感じました。私自身店内で飲食したことがあるお店だけどお持ち帰りしてないのかなとか買ってすぐに帰宅したいなどがありました。
+お店側も実はお持ち帰りできるのに知られていないということもあると思いますそこで、色々なお店が記載されているようなお持ち帰り専門のサイトがあれば便利だと考えて制作したいと思いました。
 
-* System dependencies
+### ターゲットユーザ
+- お家でお店の味を食べたいユーザー
+- 待ち時間なく購入したいユーザー
+-　お店の情報を記載し予約をしてもらう
+### 主な利用シーン
+- お持ち帰りできる
+- 知らないお店を見てお持ち帰りできる
 
-* Configuration
+## 設計書
+<...>
 
-* Database creation
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/17HNHfOwgNjDj4ojwG2ULCwB9HQgb2kzG08pQmCdNP5E/edit?usp=sharing>
 
-* Database initialization
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- パクたそ　https://www.pakutaso.com/
+- お名前.com　https://www.onamae.com/
+- ロゴ作成　https://www.designevo.com/
+- イラスト　https://www.ac-illust.com/
