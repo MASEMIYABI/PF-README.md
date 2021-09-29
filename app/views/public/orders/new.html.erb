@@ -3,8 +3,8 @@
     <div class="ec-order-new-main">
       <h2><span class="badge bg-secondary text-white mb-3">注文情報入力</span></h2>
       <%= form_with(model: @order,url: "/orders/confirm",local:true ) do |f| %>
-        <%= @customer.last_name %><%= @customer.first_name %>
-          <%=link_to "カード登録",new_card_path %>
+          <%#=link_to "カード登録",new_card_path %>
+          <p>・店頭にて現金でのお支払いです</p>
         <div class='input-group date' id='datetimepicker6'>
           <%= f.text_field :month, :placeholder => "予約"%>
           <span class="input-group-addon">
