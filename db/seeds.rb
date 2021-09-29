@@ -48,5 +48,6 @@ Item.create!(
     name: '唐揚げ',
     description: '揚げたてうまうま',
     price: '420',
+    image: File.open('./app/assets/images/karaage.jpg'),
     is_stopped: 'false',
 	)

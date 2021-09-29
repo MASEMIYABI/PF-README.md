@@ -8,7 +8,6 @@ class Customer < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :cards, dependent: :destroy
   has_many :reservations,dependent: :destroy
-  has_many :product_comments,dependent: :destroy
 
 
   def full_name

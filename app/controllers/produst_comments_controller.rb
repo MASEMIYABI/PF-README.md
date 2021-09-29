@@ -9,7 +9,6 @@ class ProdustCommentsController < ApplicationController
   end
 
   def create
-    @admins = Admin.all
     @comment = ProdustComment.new
     if @comment.save
       redirect_to produst_comments_path
@@ -17,10 +16,10 @@ class ProdustCommentsController < ApplicationController
       render :new
     end
   end
-  
+
   private
-  
+
   def produst_comment_params
-    params.require(:produst_comment).permit(:comment,:admin_id)
+    params.require(:produst_comment).permit(:comment,:customer_id)
   end
 end
