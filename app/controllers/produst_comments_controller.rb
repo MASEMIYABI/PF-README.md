@@ -9,7 +9,7 @@ class ProdustCommentsController < ApplicationController
   end
 
   def create
-    @comment = ProdustComment.new
+    @comment = ProdustComment.new(produst_comment_params)
     if @comment.save
       redirect_to produst_comments_path
     else
