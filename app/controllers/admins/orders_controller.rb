@@ -4,7 +4,6 @@ class Admins::OrdersController < ApplicationController
     end
 
     def show
-        @order_lists = Order.all
         @order = Order.find(params[:id])
         @order_items = @order.order_details
     end
