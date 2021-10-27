@@ -22,7 +22,7 @@
               <td><%#= order_item.tax_in_price %></td>
               <td><%= order_item.quantity %></td>
               <td><%#= order_item.tax_in_price * order_item.quantity %> </td>
-              <td><%= @order.month %></td>
+              <td><%= @order.month.strftime('%Y/%m/%d %H:%M:%S') %></td>
             </tr>
           <% end %>
         </tbody>
